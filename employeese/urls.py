@@ -31,7 +31,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # 🌐 Frontend Pages (Jinja Templates)
+    # Frontend Pages (Jinja Templates)
     path('', views.home, name='home'),
     path('signup/', views.signup_page, name='signup_page'),
     path('login/', views.login_page, name='login_page'),
