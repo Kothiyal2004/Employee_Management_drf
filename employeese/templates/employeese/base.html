@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management</title>
+</head>
+<body>
+  <h1>Employee Management System</h1>
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

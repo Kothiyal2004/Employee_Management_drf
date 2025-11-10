@@ -1,0 +1,20 @@
+{% extends 'employeese/base.html' %}
+{% block content %}
+<h2>Employees</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Age</th>
+    <th>Salary</th>
+  </tr>
+  {% for emp in employees %}
+  <tr>
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.department }}</td>
+    <td>{{ emp.age }}</td>
+    <td>{{ emp.salary }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
