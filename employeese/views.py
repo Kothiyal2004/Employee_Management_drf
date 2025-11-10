@@ -36,7 +36,7 @@ import requests
 
 
 # Change this URL if your API runs on a different port
-API_BASE_URL = "http://127.0.0.1:8000/api/"
+API_BASE_URL = "http://localhost:8000/api/"
 
 
 # Fetch all employees
@@ -368,6 +368,8 @@ def home(request):
 
 # 🧾 Signup Page
 def signup_page(request):
+    print("In signup page view")
+    print("Request method:", request.method)
     if request.method == "POST":
         data = {
             "username": request.POST.get("username"),
@@ -378,6 +380,7 @@ def signup_page(request):
             "salary": request.POST.get("salary"),
         }
         response = requests.post(f"{API_BASE_URL}signup/", data=data)
+        print("response status",response.json())
         if response.status_code == 201:
             messages.success(request, "Signup successful! Please login.")
             return redirect("login_page")

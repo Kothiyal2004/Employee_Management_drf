@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Add here
-    ...
+    
 ]
 
 
@@ -188,7 +188,7 @@ SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,   # optional: disable Django session auth in UI
 }
 import os
-import dj_database_url
+# import dj_database_url
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
